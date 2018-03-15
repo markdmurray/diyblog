@@ -1,2 +1,6 @@
 
-{{ authordetail }}
+{% for author in authordetail %}
+{{ author.author }}
+{{ author.title }}
+{{ author.bio }}
+{% endfor %}
