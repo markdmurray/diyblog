@@ -22,5 +22,20 @@ class BlogListView(generic.DetailView):
     template_name = 'bloglistview.html'
     context_object_name = 'bloglist'
 
+class BlogDetailView(generic.DetailView):
+    model = Blog
+    template_name = 'blogdetailview.html'
+    context_object_name = 'blogdetail'
+
+    def get_queryset(self):
+        id = self.kwargs['pk']
+        target_blog = get_object_or_404(Blog, pk = id)
+        return Blog.objects.filter(title = target_blog)
+
+class BloggerListView(generic.ListView):
+    model = Blog
+    template_name = 'bloggerlistview.html'
+    context_object_name = 'bloggerview'
+
 def index(request):
     return render(request,'index.html')
