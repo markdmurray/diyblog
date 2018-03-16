@@ -1,0 +1,39 @@
+{
+    padding : 0;
+    margin : 0;
+    border : 0;
+    }
+    body{
+    background-attachment : fixed;
+    background-size : 100% auto;
+    }
+    .blended_grid{
+    display : block;
+    width : 100%;
+    overflow : auto;
+    margin : 30px auto 0 auto;
+    }
+    .pageHeader{
+    float : left;
+    clear : none;
+    height : 10%;
+    width : 100%;
+    }
+    .pageLeftMenu{
+    float : left;
+    clear : none;
+    height : 80%;
+    width : 20%;
+    }
+    .pageContent{
+    float : left;
+    clear : none;
+    height : 60%;
+    width : 80%;
+    }
+    .pageFooter{
+    float : left;
+    clear : none;
+    height : 10%;
+    width : 100%;
+}

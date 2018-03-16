@@ -38,4 +38,5 @@ class BloggerListView(generic.ListView):
     context_object_name = 'bloggerview'
 
 def index(request):
-    return render(request,'index.html')
+    return render(request,'index.html',
+    )

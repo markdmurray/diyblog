@@ -1,1 +1,24 @@
-<h1>homepage</h1>
+{% load static %}
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="{% static 'blog/styles.css' %}">
+<title>Page Title</title>
+<meta name="description" content="Write some words to describe your html page">
+</head>
+<body>
+<div class="blended_grid">
+<div class="pageHeader">
+    <h1> List of blogs </h1>
+</div>
+<div class="pageLeftMenu">
+    <h2>Menu</h2>
+</div>
+<div class="pageContent">
+    <p>main content</p>
+</div>
+<div class="pageFooter">
+    <p>footer</p>
+</div>
+</div>
+</body>
+</html>
