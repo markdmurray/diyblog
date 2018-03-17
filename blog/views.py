@@ -17,7 +17,7 @@ class AuthorDetailView(generic.ListView):
         target_author=get_object_or_404(Author, pk = id)
         return Blog.objects.filter(author=target_author)
 
-class BlogListView(generic.DetailView):
+class BlogListView(generic.ListView):
     model = Blog
     template_name = 'bloglistview.html'
     context_object_name = 'bloglist'
@@ -33,8 +33,8 @@ class BlogDetailView(generic.DetailView):
         return Blog.objects.filter(title = target_blog)
 
 class BloggerListView(generic.ListView):
-    model = Blog
-    template_name = 'bloggerlistview.html'
+    model = Author
+    template_name = 'bloggerlist.html'
     context_object_name = 'bloggerview'
 
 def index(request):

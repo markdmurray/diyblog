@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from datetime import date
+from django.urls import reverse
 
 # Create your models here.
 
@@ -10,6 +11,10 @@ class Author(models.Model):
 
     def __str__(self):
         return self.name.username
+    
+    def get_absolute_url(self):
+        return reverse('bloggerdetail', args=[str(self.id)])
+
 
 class Blog(models.Model):
     title = models.CharField(max_length=200)
@@ -19,6 +24,10 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title
+    
+    def get_absolute_url(self):
+        return reverse('bloggerdetail', args=[str(self.id)])
+
 
 class BlogComment(models.Model):
     blog = models.ForeignKey(Blog, on_delete=models.CASCADE)
