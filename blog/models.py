@@ -26,7 +26,7 @@ class Blog(models.Model):
         return self.title
     
     def get_absolute_url(self):
-        return reverse('bloggerdetail', args=[str(self.id)])
+        return reverse('blogdetail', args=[str(self.id)])
 
 
 class BlogComment(models.Model):
