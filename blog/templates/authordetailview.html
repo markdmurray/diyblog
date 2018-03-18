@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-{% for author in authordetail %}
-{{ author.author }}
-{{ author.title }}
-{{ author.bio }}
+{{ authordetail.author }}
+{{ authordetail }}
+{{ authordetail.bio }}
+
+{% for comment in authordetail.blogcomment_set.all %}
+<p>{{ comment.description }}</p>
 {% endfor %}
 {% endblock %}

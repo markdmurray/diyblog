@@ -7,7 +7,7 @@ from django.shortcuts import get_object_or_404
 class AuthorListView(generic.ListView):
     model = Author
 
-class AuthorDetailView(generic.ListView):
+class AuthorDetailView(generic.DetailView):
     model = Blog
     template_name = 'authordetailview.html'
     context_object_name = 'authordetail'
